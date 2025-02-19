@@ -1,1 +1,6 @@
+#install praw
+#install pylance
+#install python-dotenv
+#install fpdf
+
 
