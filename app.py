@@ -30,7 +30,6 @@ def fetch_subreddit(subreddit_name, limit, score_value, type_name):
         client_secret=os.getenv("CLIENT_SECRET"),
         user_agent=os.getenv("USER_AGENT")
     )
-    reddit.validate_on_submit = True
     subred = reddit.subreddit(subreddit_name)
     post = get_posts_for_type(subred, str(type_name), limit)
     generator_results = filter(lambda post: (post.score > score_value), post)
